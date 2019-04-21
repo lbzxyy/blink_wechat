@@ -1,13 +1,14 @@
 {
+  "sitemapLocation": "sitemap.json",
   "pages": [
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/classic/classic"
   ],
   "window": {
+    "navigationBarBackgroundColor": "fefefe",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "leepoo",
+    "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  },
-  "sitemapLocation": "sitemap.json"
+    "enablePullDownRefresh": false
+  }
 }
