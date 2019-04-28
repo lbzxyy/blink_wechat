@@ -1,0 +1,12 @@
+<!--components/classic/movie/index.wxml-->
+<view class="classic-container" hover-class="none" hover-stop-propagation="false">
+    <image class="classic-img" src="{{img}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+    <image class="tag" src="images/movie@tag.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+        
+    </image>
+    <text class="content" selectable="false" space="false" decode="false">
+        {{content}}
+    </text>
+</view>
