@@ -20,7 +20,7 @@ class HTTP {
                 // 处理状态情况
                 let code = res.statusCode.toString()
                 if(code.startsWith('2')){ // 状态码是2开头的 说明请求成功
-                    params.success(res.data)
+                    params.success && params.success(res.data)
                 }else{
                     wx.showToast({
                         title: '错误',
