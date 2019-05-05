@@ -1,0 +1,14 @@
+<!--components/epsoide/index.wxml-->
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="index-container" hover-class="none" hover-stop-propagation="false">
+        <text class="plain">No.</text>
+        <text class="index">{{_index}}</text>
+        <view class="line" hover-class="none" hover-stop-propagation="false">
+            
+        </view>
+    </view>
+    <view class="data-container" hover-class="none" hover-stop-propagation="false">
+         <text class="month">{{month}}</text>
+         <text class="year">{{year}}</text>
+    </view>
+</view>
