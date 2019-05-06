@@ -1,6 +1,10 @@
 <!--pages/classic/classic.wxml-->
-<view class="header" hover-class="none" hover-stop-propagation="false">
-    <v-epsoide class="epsoide" index="{{classic.index}}"/>
-    <v-like class="like" bind:like="onLike"  like='{{classic.like_status}}'  count='{{classic.fav_nums}}'/>
+<view class="container" hover-class="none" hover-stop-propagation="false">
+    <view class="header" hover-class="none" hover-stop-propagation="false">
+        <v-epsoide class="epsoide" index="{{classic.index}}"/>
+        <v-like class="like" bind:like="onLike"  like='{{classic.like_status}}'  count='{{classic.fav_nums}}'/>
+    </view>
+        <v-movie img='{{classic.images}}' content='{{classic.content}}'></v-movie>
+        <v-navi bind:left="onNext" bind:right="onPrevious" class="navi" title="{{classic.title}}" first="{{first}}" latest="{{latest}}"/>
 </view>
-<v-movie img='{{classic.images}}' content='{{classic.content}}'></v-movie>
+
