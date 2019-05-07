@@ -24,7 +24,7 @@ Page({
         })
     })
   },
-  methods: {
+  // methods: {
     onLike: function(event) {
       let behavior = event.detail.behavior
       likeModel.like(behavior,this.data.classic.id,this.data.classic.type)
@@ -48,8 +48,8 @@ Page({
         })
       })
 
-    }
-  },
+    },
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
