@@ -19,25 +19,36 @@ Page({
    */
   onLoad: function (options) {
     classicModel.getLatest(res=>{
-      console.log(res);
-
         this.setData({
           classic: res
         })
     })
   },
+  methods: {
+    onLike: function(event) {
+      let behavior = event.detail.behavior
+      likeModel.like(behavior,this.data.classic.id,this.data.classic.type)
+      
+    },
+    onNext: function(event) {
+      this._updateClassic('next')
+    },
+    onPrevious: function(event) {
+      this._updateClassic('previous')
+      console.log('点击了向右');
+      
+    },
+    _updateClassic: function(nextOrPrevious) {
+      const index = this.data.classic.index
+      classicModel.getClassic(index,nextOrPrevious,(res)=>{
+        this.setData({
+          classic: res,
+          latest: classicModel.isLatest(res.index),
+          first: classicModel.isFirst(res.index)
+        })
+      })
 
-  onLike: function(event) {
-    console.log(event);
-    let behavior = event.detail.behavior
-    likeModel.like(behavior,this.data.classic.id,this.data.classic.type)
-    
-  },
-  onNext: function(params) {
-    
-  },
-  onPrevious: function(params) {
-    
+    }
   },
 
   /**
